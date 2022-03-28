@@ -46,14 +46,14 @@
     height: 31px;
     position: sticky;
     top: 0;
-    left: 50%;
+    right: 50%;
     z-index: 2;
     background: #fff;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    -webkit-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(50%, 0);
+    -o-transform: translate(50%, 0);
+    transform: translate(50%, 0);
   }
   &__notch::before {
     content: "";
@@ -105,6 +105,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
+        span{
+          direction: ltr;
+        }
       }
     }
     &__hero {

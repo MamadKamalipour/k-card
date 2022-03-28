@@ -1,8 +1,8 @@
 import React from "react";
 import "./Profile.scss";
 import Hero from "../Hero/Hero";
-import avatar from "../../assets/images/img1.jpg";
 import CardList from "../CardList/CardList";
+import { user } from "../../FakeData";
 function Profile() {
   return (
     <>
@@ -11,23 +11,29 @@ function Profile() {
           <div className="device__notch col-4"></div>
           <div className="device__content">
             <div className="device__content__info">
-              <h1>محمدجواد کمالی پور </h1>
+              <h1>{`${user.name} ${user.familyName}`}</h1>
               <div className="info tel">
-                <i className="fa fa-phone">icon</i>
-                <span>+98 902 716 5900</span>
+                <i
+                  className="fa-solid fa-badge-check "
+                  style={{ color: "rgb(109,242,222)" }}
+                ></i>
+                <span>{user.phoneNumber.value}</span>
               </div>
               <div className="info email">
-                <i className="fa fa-email">icon</i>
-                <span>mohammad.kp8093@gmail.com</span>
+                <i
+                  className="fa-solid fa-badge-check"
+                  style={{ color: "rgb(109,242,222)" }}
+                ></i>
+                <span>{user.email.value}</span>
               </div>
             </div>
             <Hero
-              background={avatar}
+              background={user.avatar}
               overlayColor="rgb(71 82 98 / 90%)"
               className="device__content__hero"
             />
-            <div class="rhombus">
-              <img className="" src={avatar} alt={avatar} />
+            <div className="rhombus">
+              <img className="" src={user.avatar} alt={user.avatar} />
             </div>
           </div>
           <div className="container mt-5">
