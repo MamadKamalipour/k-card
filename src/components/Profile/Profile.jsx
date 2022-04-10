@@ -6,7 +6,7 @@ import { user } from "../../FakeData";
 function Profile() {
   return (
     <>
-      <div className="container-fluid pt-3 ">
+      <article className="container-fluid p-0 pt-3 ">
         <div className="device col-sm-12 col-lg-5 col-xl-4 col-md-7 mx-auto ">
           <div className="device__notch col-4"></div>
           <div className="device__content">
@@ -40,7 +40,7 @@ function Profile() {
             <CardList />
           </div>
         </div>
-      </div>
+      </article>
     </>
   );
 }

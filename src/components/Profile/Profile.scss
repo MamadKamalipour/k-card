@@ -37,10 +37,17 @@
   border-radius: 40px;
   -webkit-box-shadow: 0 0.5rem 2rem 0.5rem rgb(0 0 0 / 10%);
   box-shadow: 0 0.5rem 2rem 0.5rem rgb(0 0 0 / 10%);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   max-height: 100vh;
   overflow-y: scroll;
   max-width: 407px;
+  @media (max-width: 424px) {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    max-height: unset;
+    margin-bottom: 20px;
+  }
   &__notch {
     width: 220px;
     height: 31px;
@@ -54,6 +61,9 @@
     -webkit-transform: translate(50%, 0);
     -o-transform: translate(50%, 0);
     transform: translate(50%, 0);
+    @media (max-width: 424px) {
+      display: none;
+    }
   }
   &__notch::before {
     content: "";
@@ -105,7 +115,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
-        span{
+        span {
           direction: ltr;
         }
       }
