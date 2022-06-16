@@ -1,0 +1,39 @@
+$blur: 10px;
+$shadow-opacity: 0.3;
+$image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/jess-harding-lqT6NAmTaiY-unsplash.jpg";
+$white-color: #ffffff;
+$gray-color: #e5e5e5;
+$light-yellow-color: #fdb644;
+$orange-color: #fc8a11;
+$yellow-color: #fca311;
+$hardBlue-color: #14213d;
+$dark-color: #000000;
+$crimson-color: #ed143d;
+
+*,
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+.button-with-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	a {
+		font-weight: bold;
+		color: unset;
+	}
+	i {
+		font-size: 1.5rem;
+	}
+}
+@mixin glass() {
+	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 80px rgb(0 0 0 / 20%);
+	overflow: hidden;
+}

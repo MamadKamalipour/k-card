@@ -7,18 +7,55 @@ export const user = {
 	avatar: avatar,
 	phoneNumber: "+98 902 716 5900",
 	email: "Mohammad.kp8093@gmail.com",
+	description: "من محمد هستم 20 ساله از رشت و 2 ساله تو زمینه برنامه نویسی وبسایت فعالیت مینم",
 	location: "ایران، گیلان، رشت",
 	socialMedias: [
 		{
-			name: "تلگرام",
+			name: "telegram",
 			link: "#",
 		},
 		{
-			name: "واتساپ",
+			name: "whatsapp",
 			link: "#",
 		},
 		{
-			name: "اینستاگرام",
+			name: "instagram",
+			link: "#",
+		},
+		{
+			name: "dribble",
+			link: "#",
+		},
+		{
+			name: "pinterest",
+			link: "#",
+		},
+		{
+			name: "twitter",
+			link: "#",
+		},
+		{
+			name: "youtube",
+			link: "#",
+		},
+		{
+			name: "aparat",
+			link: "#",
+		},
+		{
+			name: "tiktok",
+			link: "#",
+		},
+		{
+			name: "spotify",
+			link: "#",
+		},
+		{
+			name: "soundcloud",
+			link: "#",
+		},
+		{
+			name: "twitch",
 			link: "#",
 		},
 	],
