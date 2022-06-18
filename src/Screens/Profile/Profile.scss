@@ -19,7 +19,7 @@
 		svg {
 			width: 350px;
 			height: 350px;
-			fill: $yellow-color;
+			fill: $orange-color;
 			@media (min-width: 1024px) {
 				width: 400px;
 				height: 400px;
@@ -43,7 +43,7 @@
 				span {
 					font-weight: bold;
 					font-size: 2rem;
-					color: $white-color;
+					color: $orange-color;
 				}
 				@media (min-width: 768px) {
 					h3 {
@@ -81,13 +81,10 @@
 			}
 			.calling-buttons {
 				display: flex;
-				justify-content: center;
-				align-items: center;
 				gap: 20px;
-				flex-direction: column;
 				padding-bottom: 1rem;
+				flex-wrap: wrap;
 				@media (min-width: 767px) {
-					flex-direction: row;
 					margin-bottom: 2rem;
 				}
 			}

@@ -1,14 +1,12 @@
 $blur: 10px;
 $shadow-opacity: 0.3;
 $image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/jess-harding-lqT6NAmTaiY-unsplash.jpg";
-$white-color: #ffffff;
-$gray-color: #e5e5e5;
-$light-yellow-color: #fdb644;
-$orange-color: #fc8a11;
-$yellow-color: #fca311;
-$hardBlue-color: #14213d;
-$dark-color: #000000;
-$crimson-color: #ed143d;
+$white-color: #ededed;
+$yellow-color: #ffe400;
+$gray-color: #747474;
+$orange-color: #ff652f;
+$dark-color: #272727;
+$green-color: #14a76c;
 
 *,
 html {
@@ -16,6 +14,7 @@ html {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+	user-select: none;
 }
 .button-with-icon {
 	display: flex;
@@ -30,10 +29,21 @@ html {
 		font-size: 1.5rem;
 	}
 }
+
 @mixin glass() {
 	border-radius: 25px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba($gray-color, 0.6);
 	border: 2px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 80px rgb(0 0 0 / 20%);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 	overflow: hidden;
+}
+
+.section {
+	@include glass();
+	margin-top: 50px;
+	padding: 5rem 2rem;
+}
+.color-orange {
+	color: $orange-color;
+	font-weight: bold;
 }
