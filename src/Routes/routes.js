@@ -1,6 +1,6 @@
 import WebsiteRoutes from "Routes/WebsiteRoutes";
 import Dashboard from "UserDashboard";
-
+import Page404 from "Screens/Page404";
 export const routes = [
 	{
 		path: "/*",
@@ -14,7 +14,7 @@ export const routes = [
 	},
 	{
 		path: "/404",
-		name: "User Dashboard",
-		element: <h2>Not Found</h2>,
+		name: "Not Found",
+		element: <Page404 />,
 	},
 ];

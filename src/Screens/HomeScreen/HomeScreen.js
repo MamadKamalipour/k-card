@@ -2,14 +2,24 @@ import { Cards } from "components";
 import React from "react";
 import Lottie from "react-lottie";
 import * as animationData from "assets/earth-love-earth-day.json";
-
+import * as animationData2 from "assets/lf30_editor_h64eijlm.json";
+import image3 from "assets/images/card3.png";
 import "./index.scss";
+import { BlobButton } from "components";
 
 const HomeScreen = () => {
-	const defaultOptions = {
+	const earthAnimation = {
 		loop: true,
 		autoplay: true,
 		animationData: animationData,
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid slice",
+		},
+	};
+	const clientAnimation = {
+		loop: true,
+		autoplay: true,
+		animationData: animationData2,
 		rendererSettings: {
 			preserveAspectRatio: "xMidYMid slice",
 		},
@@ -45,12 +55,41 @@ const HomeScreen = () => {
 				<div>
 					<Lottie
 						style={{ cursor: "unset" }}
-						options={defaultOptions}
+						options={earthAnimation}
 						height={400}
 						width={400}
 						isClickToPauseDisabled
 					/>
 				</div>
+			</section>
+			{/* third section*/}
+			<section className='container section third-section '>
+				<div className='calltoaction-button'>
+					<p>
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+						طراحان گرافیک است، چاپگرها و
+					</p>
+					<BlobButton isLink link='#' backgroundColor='#14a76c'>
+						خرید
+					</BlobButton>
+				</div>
+				<div>
+					<Lottie
+						style={{ cursor: "unset", fill: "transparent" }}
+						options={clientAnimation}
+						height={400}
+						width={400}
+						isClickToPauseDisabled
+					/>
+				</div>
+			</section>
+			{/* fourth section */}
+			<section className='container section fourth-section'>
+				<p>
+					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+					طراحان گرافیک است، چاپگرها و
+				</p>
+				<img src={image3} alt='' className='offer-image' />
 			</section>
 		</main>
 	);
