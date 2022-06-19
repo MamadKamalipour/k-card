@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router";
-import EditProfile from "../Screens/EditProfile/EditProfile";
+import EditProfile from "../Screens/EditProfile";
 import HomeScreen from "../Screens/HomeScreen/HomeScreen";
 import Profile from "../Screens/Profile/Profile";
 import Shop from "../Screens/Shop/Shop";
