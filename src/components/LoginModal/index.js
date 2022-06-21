@@ -130,7 +130,7 @@ const LoginModal = ({ iconButton = true }) => {
 									type='submit'
 									id='loginBtn'
 								>
-									Login
+									ورود
 								</Button>
 							</Form>
 						)}
