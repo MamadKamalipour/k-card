@@ -33,6 +33,15 @@
 		flex-grow: 1;
 	}
 	.footer {
+		height: 50px;
+		color: $white-color;
 		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			text-decoration: none;
+			margin-right: 5px;
+		}
 	}
 }

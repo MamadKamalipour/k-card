@@ -4,6 +4,7 @@ import Profile from "UserDashboard/layouts/profile";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import Users from "./layouts/Users";
 
 const routes = [
 	{
@@ -15,7 +16,16 @@ const routes = [
 		link: "/dashboard",
 		component: <Dashboard />,
 	},
-	
+	{
+		type: "collapse",
+		name: "Users",
+		key: "users",
+		icon: <Icon fontSize='small'>group</Icon>,
+		route: "/users",
+		link: "users",
+		component: <Users />,
+	},
+
 	{
 		type: "collapse",
 		name: "Setting",

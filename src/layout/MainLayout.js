@@ -8,7 +8,18 @@ const MainLayout = ({ children }) => {
 				<Header />
 			</header>
 			<main>{children}</main>
-			<footer className='footer'>footer</footer>
+			<footer className='footer'>
+				<span>
+					❤️ Developed and Designed By{" "}
+					<a
+						href='https://www.instagram.com/mammadk9/'
+						target='blank'
+						className='color-orange'
+					>
+						MohammadJavad Kamalipour
+					</a>
+				</span>
+			</footer>
 		</div>
 	);
 };

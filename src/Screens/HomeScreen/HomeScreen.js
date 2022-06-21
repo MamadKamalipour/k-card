@@ -84,13 +84,13 @@ const HomeScreen = () => {
 				</div>
 			</section>
 			{/* fourth section */}
-			<section className='container section fourth-section'>
+			{/* <section className='container section fourth-section'>
 				<p>
 					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
 					طراحان گرافیک است، چاپگرها و
 				</p>
 				<img src={image3} alt='' className='offer-image' />
-			</section>
+			</section> */}
 			<Modal
 				id='RegisterLoginModal'
 				buttonText={
