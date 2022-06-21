@@ -15,7 +15,7 @@ const routes = [
 		link: "/dashboard",
 		component: <Dashboard />,
 	},
-
+	
 	{
 		type: "collapse",
 		name: "Setting",

@@ -5,7 +5,7 @@ import * as animationData from "assets/earth-love-earth-day.json";
 import * as animationData2 from "assets/lf30_editor_h64eijlm.json";
 import image3 from "assets/images/card3.png";
 import "./index.scss";
-import { BlobButton } from "components";
+import { BlobButton, FloatingButton, Modal, LoginModal } from "components";
 
 const HomeScreen = () => {
 	const earthAnimation = {
@@ -91,6 +91,21 @@ const HomeScreen = () => {
 				</p>
 				<img src={image3} alt='' className='offer-image' />
 			</section>
+			<Modal
+				id='RegisterLoginModal'
+				buttonText={
+					<FloatingButton
+						position={{ top: "50%", left: "0", right: "-30px", bottom: "0" }}
+						backgroundColor='#ff652f'
+					>
+						<i className='fas fa-user usericon'></i>
+					</FloatingButton>
+				}
+				modalTitle='ورود'
+				isCentered
+			>
+				<LoginModal />
+			</Modal>
 		</main>
 	);
 };

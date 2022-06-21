@@ -1,8 +1,12 @@
+import { FloatingButton, Modal, Button } from "components";
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import "./index.scss";
 
 const EditProfile = () => {
+	const submitFormHandler = () => {
+		console.log("submited");
+	};
 	return (
 		<>
 			<section className=''>
@@ -242,6 +246,27 @@ const EditProfile = () => {
 					)}
 				</Formik>
 			</section>
+			<Modal
+				id='submitChangesModal'
+				buttonText={
+					<FloatingButton position={{ right: "20px", bottom: "10px" }}>
+						ذخیره
+					</FloatingButton>
+				}
+				// buttonClassnames
+				modalTitle='ذخیره تغییرات'
+				isCentered={true}
+			>
+				<p>آیا مایل به ذخیره تغییرات هستید؟</p>
+				<div className='modal-buttons-wrapper'>
+					<Button type='submit' buttonType='success' onClick={() => submitFormHandler()}>
+						ذخیره
+					</Button>
+					<Button type='button' data-bs-dismiss='modal' aria-label='Close'>
+						انصراف
+					</Button>
+				</div>
+			</Modal>
 		</>
 	);
 };
