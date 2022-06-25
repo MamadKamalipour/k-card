@@ -5,7 +5,9 @@ import { BlobButton } from "components";
 import { user } from "FakeData";
 import { colors, socialMediaColors } from "values/colors";
 import { icons } from "values";
+import vcf from "../../assets/Alihoushnagi.vcf";
 const Profile = () => {
+	console.log(vcf);
 	return (
 		<main className='profile'>
 			{/* Information */}
@@ -48,7 +50,9 @@ const Profile = () => {
 					<div className='calling-buttons'>
 						<BlobButton backgroundColor={"#fca311"}> شماره تماس </BlobButton>
 						<BlobButton backgroundColor={"#ed143d"}> ایمیل </BlobButton>
-						<BlobButton backgroundColor={"#4169e1"}> افزودن به مخاطبین </BlobButton>
+						<BlobButton backgroundColor={"royalblue"} isLink link={vcf}>
+							افزودن به مخاطبین
+						</BlobButton>
 					</div>
 				</div>
 			</section>

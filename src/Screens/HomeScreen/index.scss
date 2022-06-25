@@ -24,13 +24,14 @@
 	align-items: center;
 	margin-top: 50px;
 	color: $white-color;
-	div {
-		&:first-child {
-			width: 60%;
-		}
-	}
+
 	@media (min-width: 767px) {
 		flex-direction: row;
+		div {
+			&:first-child {
+				width: 60%;
+			}
+		}
 	}
 }
 .third-section {

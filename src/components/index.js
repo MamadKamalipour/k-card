@@ -6,3 +6,4 @@ export { default as FloatingButton } from "./FloatingButton";
 export { default as Button } from "./Button";
 export { default as LoginModal } from "./LoginModal";
 export { default as Table } from "./Table";
+export { default as Pagination } from "./Pagination";

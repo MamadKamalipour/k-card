@@ -8,7 +8,6 @@ export const user = {
 	phoneNumber: "+98 902 716 5900",
 	email: "Mohammad.kp8093@gmail.com",
 	description: "من محمد هستم 20 ساله از رشت و 2 ساله تو زمینه برنامه نویسی وبسایت فعالیت مینم",
-	location: "ایران، گیلان، رشت",
 	socialMedias: [
 		{
 			name: "telegram",

@@ -9,16 +9,14 @@ const MainLayout = ({ children }) => {
 			</header>
 			<main>{children}</main>
 			<footer className='footer'>
-				<span>
-					❤️ Developed and Designed By{" "}
-					<a
-						href='https://www.instagram.com/mammadk9/'
-						target='blank'
-						className='color-orange'
-					>
-						MohammadJavad Kamalipour
-					</a>
-				</span>
+				<a
+					href='https://www.instagram.com/mammadk9/'
+					target='blank'
+					className='color-orange'
+				>
+					MohammadJavad Kamalipour
+				</a>
+				<span> Developed and Designed By</span>
 			</footer>
 		</div>
 	);
