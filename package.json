@@ -1,5 +1,5 @@
 {
-	"name": "v-card",
+	"name": "nfccard",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -30,6 +30,7 @@
 		"styled-components": "^5.3.3",
 		"stylis": "4.0.13",
 		"stylis-plugin-rtl": "^2.1.1",
+		"swiper": "^8.2.4",
 		"web-vitals": "^2.1.4",
 		"yup": "0.32.11"
 	},

@@ -1,0 +1,90 @@
+@import "global.scss";
+.Hero {
+	width: 100%;
+	height: 100vh;
+	background-color: $dark-color;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	color: $white-color;
+	text-align: center;
+	position: relative;
+	z-index: 4;
+	.info-wrapper {
+		margin-top: 250px;
+		z-index: 10;
+	}
+	@media (min-width: 1399px) {
+		text-align: right;
+	}
+	.intro {
+		padding: 5rem;
+		margin-bottom: 5rem;
+
+		h1 {
+			font-size: 3.2rem;
+			white-space: nowrap;
+		}
+		p {
+			font-size: 1.3rem;
+		}
+	}
+	.cards-wrapper {
+		direction: ltr;
+
+		img {
+			object-fit: cover;
+			transform: rotate(90deg);
+			width: 500px;
+			height: 200px;
+		}
+		.swiper {
+			width: 240px;
+			height: 320px;
+		}
+
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 22px;
+			color: #fff;
+		}
+
+		.swiper-3d .swiper-slide-shadow {
+			background-color: transparent;
+		}
+	}
+
+	svg {
+		background: 0 0 !important;
+		vertical-align: middle;
+		fill: #fff;
+		z-index: 10;
+	}
+	video {
+		z-index: 2;
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		object-fit: cover;
+		top: 0%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.video-overlay {
+		position: absolute;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 4;
+		background-color: rgba($color: $dark-color, $alpha: 0.8);
+	}
+}
+.second-section {
+	height: 100vh;
+	background-color: #fff;
+}

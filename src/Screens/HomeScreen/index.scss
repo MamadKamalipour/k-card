@@ -16,6 +16,31 @@
 		padding: 5rem;
 		margin-bottom: 5rem;
 	}
+	.cards-wrapper {
+		width: 30%;
+		direction: ltr;
+		img {
+			object-fit: cover;
+			transform: rotate(90deg);
+		}
+		.swiper {
+			width: 240px;
+			height: 320px;
+		}
+
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// border-radius: 18px;
+			// background-color: red;
+			font-size: 22px;
+			color: #fff;
+		}
+		.swiper-3d .swiper-slide-shadow {
+			background-color: transparent;
+		}
+	}
 }
 .seconde-section {
 	display: flex;
@@ -86,4 +111,19 @@
 			gap: 20px;
 		}
 	}
+}
+.review-section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	color: $white-color;
+	margin-top: 50px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.mySwiper2 {
+	width: 100%;
+	direction: ltr;
 }

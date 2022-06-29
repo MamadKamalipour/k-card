@@ -11,7 +11,7 @@ const HeaderSection = styled.section`
 `;
 const Logo = styled.img`
 	width: 130px;
-	filter: invert(1);
+	/* filter: invert(1); */
 `;
 
 const Header = () => {

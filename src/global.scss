@@ -5,7 +5,7 @@ $white-color: #ededed;
 $yellow-color: #ffe400;
 $gray-color: #747474;
 $orange-color: #ff652f;
-$dark-color: #272727;
+$dark-color: #282a30;
 $green-color: #14a76c;
 
 *,
@@ -46,6 +46,13 @@ html {
 	margin-top: 50px;
 	padding: 5rem 2rem;
 }
+.full-section {
+	@include glass();
+	margin-top: 50px;
+	padding: 5rem 2rem;
+	border-radius: 0;
+	background: rgba($gray-color, 0.3);
+}
 .color-orange {
 	color: $orange-color;
 	font-weight: bold;
@@ -63,4 +70,46 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.swiper-button-next {
+	background-color: transparent;
+	border: 1px solid $white-color;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+
+	transition: all 200ms ease-in-out;
+	&::after {
+		font-size: 1.2rem;
+		margin-right: 3px;
+		color: #ededed;
+	}
+	&:hover {
+		background-color: $orange-color;
+		border-color: $orange-color;
+	}
+}
+.swiper-button-prev {
+	background-color: transparent;
+	border: 1px solid $white-color;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	transition: all 200ms ease-in-out;
+	&::after {
+		margin-left: 3px;
+		font-size: 1.2rem;
+		color: #ededed;
+	}
+	&:hover {
+		background-color: $orange-color;
+		border-color: $orange-color;
+	}
+}
+.swiper-pagination-bullet {
+	background-color: $white-color;
+}
+.swiper-pagination-bullet-active {
+	background-color: $orange-color;
 }
