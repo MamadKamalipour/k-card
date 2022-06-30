@@ -4,10 +4,17 @@ import image2 from "assets/images/card2.png";
 import image3 from "assets/images/card3.png";
 import video from "assets/herovideo.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 import { EffectCards } from "swiper";
 import "./index.scss";
 import Lottie from "react-lottie";
 import * as animationData from "assets/earth-love-earth-day.json";
+import * as animationData2 from "assets/lf30_editor_h64eijlm.json";
+import { ReviewCard } from "components";
+import { Modal } from "components";
+import { FloatingButton } from "components";
+import { LoginModal } from "components";
+import { BlobButton } from "components";
 
 function HomeScreen2() {
 	const earthAnimation = {
@@ -18,22 +25,26 @@ function HomeScreen2() {
 			preserveAspectRatio: "xMidYMid slice",
 		},
 	};
+	const clientAnimation = {
+		loop: true,
+		autoplay: true,
+		animationData: animationData2,
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid slice",
+		},
+	};
 	return (
 		<main>
 			<div className='Hero'>
 				<div className='container info-wrapper'>
-					<div className='row'>
+					<div className='row align-items-center'>
 						<div className='col-12 col-md-6'>
 							<div className='intro'>
 								<h1>
 									با <span className='color-orange'>NFC Card</span> حرفه ای تر کار
 									کنید
 								</h1>
-								<p>
-									برای آغاز هر همکاری، معرفی درست حرف اول را می زند! NFC کارت این
-									امکان را به شما می دهد تا به سادگی اطلاعات لازم خود اعم از راه
-									های ارتباطی و شبکه های اجتماعی را به مخاطبانتان منتقل کنید.
-								</p>
+								<p>برای آغاز هر همکاری، معرفی درست حرف اول را می زند!</p>
 							</div>
 						</div>
 						<div className='col-12 col-md-6'>
@@ -64,7 +75,6 @@ function HomeScreen2() {
 				</div>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					// xmlns:xlink='http://www.w3.org/1999/xlink'
 					width='100%'
 					height='96px'
 					viewBox='0 0 100 100'
@@ -78,31 +88,139 @@ function HomeScreen2() {
 				<video src={video} muted loop autoPlay />
 				<div className='video-overlay'></div>
 			</div>
+			{/* seconde section */}
 			<div className='second-section'>
-				{/* seconde section */}
-				<section className=''>
-					<div>
-						<h4>
-							چرا باید <span className='color-orange'>کارت هوشمند</span> بخریم؟
-						</h4>
-						<p>
-							با خرید کارت هوشمند K Card میتونید خیلی حرفه ای تر خودتونو معرفی کنید و
-							تو یه لحظه همه اطلاعاتی که میخواید رو با فرد مقابلتون به اشتراک بذارید
-							علاوه بر این یکبار میخرید و همیشه استفاده میکنید با اینکار میتونید جلوی
-							قطع شدن کلی درخت رو بگیرید و تو حفظ محیط زیست یه قدم حتی کوچیک بردارید
-						</p>
-					</div>
-					<div>
-						<Lottie
-							style={{ cursor: "unset" }}
-							options={earthAnimation}
-							height={400}
-							width={400}
-							isClickToPauseDisabled
-						/>
-					</div>
-				</section>
+				<div className='info-wrapper mt-5'>
+					<h4>
+						چرا باید <span className='color-orange'>کارت هوشمند</span> بخریم؟
+					</h4>
+					<p>
+						با خرید کارت هوشمند NFC Card میتونید خیلی حرفه ای تر خودتونو معرفی کنید و تو
+						یه لحظه همه اطلاعاتی که میخواید رو با فرد مقابلتون به اشتراک بذارید علاوه بر
+						این یکبار میخرید و همیشه استفاده میکنید با اینکار میتونید جلوی قطع شدن کلی
+						درخت رو بگیرید و تو حفظ محیط زیست یه قدم حتی کوچیک بردارید
+					</p>
+				</div>
+				<div className='lottie-wrapper'>
+					<Lottie
+						style={{ cursor: "unset" }}
+						options={earthAnimation}
+						isClickToPauseDisabled
+					/>
+				</div>
+				<svg
+					version='1.2'
+					className='wave'
+					xmlns='http://www.w3.org/2000/svg'
+					viewBox='0 0 1440 160'
+				>
+					<path
+						id='Layer'
+						d='m0 64l80-16c80-16 240-48 400-42.7 160 5.7 320 47.7 480 64 160 15.7 320 5.7 400 0l80-5.3v96h-80c-80 0-240 0-400 0q-240 0-480 0c-160 0-320 0-400 0h-80z'
+					/>
+				</svg>
 			</div>
+			{/* third section */}
+			<div className='third-section'>
+				<div className='info-wrapper '>
+					<h4>
+						کارت ویزیت <span className='color-orange'>هوشمند</span> چیه؟
+					</h4>
+					<p>
+						نسل جدید کارت ویزیت های هوشمند که با استفاده از تکنولوژی nfc اطلاعات کاربر
+						رو داخل خودشون ذخیره و با نگه داشتن جلوی موبایل مخاطب کل اطلاعاتی که داخل یه
+						کارت ویزیت معمولی هست به علاوه اطلاعات دیگه از جمله ادرس تمامی شبکه های
+						اجتماعی به گوشی فرد مقابل میرسونه و شما رو از دردسر طراحی و چاپ هزارتا کارت
+						ویزیت قدیمی راحت میکنه
+					</p>
+				</div>
+				<div className='lottie-wrapper'>
+					<Lottie
+						style={{ cursor: "unset", fill: "transparent" }}
+						options={clientAnimation}
+						isClickToPauseDisabled
+					/>
+				</div>
+				<BlobButton
+					backgroundColor='#14a76c'
+					style={{ width: "60%", margin: "10px auto" }}
+					isLink
+					link='https://wa.me/989027165900?text=%D8%B3%D9%84%D8%A7%D9%85'
+				>
+					سفارش کارت
+				</BlobButton>
+			</div>
+			{/* review section */}
+			<section className='container review-section'>
+				<h3>
+					نظرات <span className='color-orange'>مشتریان</span>
+				</h3>
+				<Swiper
+					loop={true}
+					pagination={{
+						clickable: true,
+					}}
+					slidesPerView={4}
+					spaceBetween={40}
+					breakpoints={{
+						"@0.00": {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+						"@0.50": {
+							slidesPerView: 1,
+							spaceBetween: 20,
+						},
+						"@0.75": {
+							slidesPerView: 2,
+							spaceBetween: 30,
+						},
+						"@1.00": {
+							slidesPerView: 3,
+							spaceBetween: 40,
+						},
+						"@1.50": {
+							slidesPerView: 4,
+							spaceBetween: 50,
+						},
+					}}
+					navigation={true}
+					modules={[Pagination, Navigation]}
+					className='mySwiper2'
+				>
+					<SwiperSlide>
+						<ReviewCard />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ReviewCard />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ReviewCard />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ReviewCard />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ReviewCard />
+					</SwiperSlide>
+				</Swiper>
+			</section>
+			<Modal
+				id='RegisterLoginModal'
+				buttonText={
+					<FloatingButton
+						isSpan
+						position={{ top: "50%", left: "0", right: "-30px", bottom: "0" }}
+						backgroundColor='#ff652f'
+					>
+						<i className='fas fa-user usericon'></i>
+					</FloatingButton>
+				}
+				modalTitle='ورود'
+				isCentered
+			>
+				<LoginModal />
+			</Modal>
 		</main>
 	);
 }

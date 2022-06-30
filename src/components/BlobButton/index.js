@@ -5,11 +5,11 @@ import "./index.scss";
 const Blob = styled.span`
 	background-color: ${(props) => props.backgroundColor} !important;
 `;
-const BlobButton = ({ backgroundColor, children, isLink, link }) => {
+const BlobButton = ({ backgroundColor, children, isLink, link, style }) => {
 	return (
 		<>
 			{isLink ? (
-				<a href={link} className='blob-btn'>
+				<a href={link} target='blank' className='blob-btn' style={style}>
 					{children}
 					<span className='blob-btn__inner'>
 						<span className='blob-btn__blobs'>
@@ -33,7 +33,7 @@ const BlobButton = ({ backgroundColor, children, isLink, link }) => {
 					</span>
 				</a>
 			) : (
-				<button className='blob-btn'>
+				<button className='blob-btn' style={style}>
 					{children}
 					<span className='blob-btn__inner'>
 						<span className='blob-btn__blobs'>

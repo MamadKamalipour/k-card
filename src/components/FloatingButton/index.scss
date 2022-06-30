@@ -6,6 +6,7 @@
 	color: #ffffff;
 	border-radius: 50%;
 	position: relative;
+	z-index: 1000;
 	&:before,
 	&:after {
 		content: "";

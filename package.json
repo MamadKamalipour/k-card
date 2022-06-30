@@ -1,6 +1,6 @@
 {
 	"name": "nfccard",
-	"version": "0.1.0",
+	"version": "0.9",
 	"private": true,
 	"dependencies": {
 		"@emotion/cache": "11.7.1",
