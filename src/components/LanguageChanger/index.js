@@ -29,7 +29,7 @@ function LanguageChanger() {
 							className='dropdown-item'
 							onClick={() => {
 								i18next.changeLanguage(lang.code);
-								window.location.reload();
+								// window.location.reload();
 							}}
 							disabled={lang.code === currentLanguage.code}
 						>

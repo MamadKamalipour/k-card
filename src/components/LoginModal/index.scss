@@ -109,9 +109,10 @@
 					}
 				}
 				span {
+					text-align: left;
 					margin-bottom: 10px;
 					button {
-						margin-right: 10px;
+						margin-left: 10px;
 						border: 0;
 						outline: 0;
 						background-color: unset;
@@ -199,5 +200,16 @@
 		margin: 0%;
 		padding: 0;
 		font-size: 0.8rem;
+	}
+}
+
+body[dir="rtl"] #LoginModal .modal-body .login-form {
+	form {
+		span {
+			text-align: right;
+			button {
+				margin-right: 10px;
+			}
+		}
 	}
 }

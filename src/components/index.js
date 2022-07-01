@@ -9,3 +9,4 @@ export { default as Table } from "./Table";
 export { default as Pagination } from "./Pagination";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as LanguageChanger } from "./LanguageChanger";
+export { default as Loading } from "./Loading";

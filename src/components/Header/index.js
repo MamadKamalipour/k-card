@@ -12,6 +12,7 @@ const HeaderSection = styled.section`
 const Logo = styled.img`
 	width: 130px;
 	/* filter: invert(1); */
+	/* -webkit-box-reflect: below 20px linear-gradient(#00000000, #000000aa); */
 `;
 
 const Header = () => {

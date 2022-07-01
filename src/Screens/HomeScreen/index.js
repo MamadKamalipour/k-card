@@ -1,22 +1,29 @@
-import React from "react";
+import * as animationData from "assets/earth-love-earth-day.json";
+import video from "assets/herovideo.mp4";
 import image1 from "assets/images/card1.png";
 import image2 from "assets/images/card2.png";
 import image3 from "assets/images/card3.png";
-import video from "assets/herovideo.mp4";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
-import { EffectCards } from "swiper";
-import "./index.scss";
-import Lottie from "react-lottie";
-import * as animationData from "assets/earth-love-earth-day.json";
 import * as animationData2 from "assets/lf30_editor_h64eijlm.json";
-import { ReviewCard } from "components";
-import { Modal } from "components";
-import { FloatingButton } from "components";
-import { LoginModal } from "components";
-import { BlobButton } from "components";
+import { BlobButton, FloatingButton, LoginModal, Modal, ReviewCard } from "components";
+import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import { EffectCards, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./index.scss";
 
-function HomeScreen2() {
+function HomeScreen() {
+	const [isLtr, setIsLtr] = useState();
+	useEffect(() => {
+		Cookies.set("i18next", "fas");
+		document.querySelector("body").dir = "rtl";
+		if (document.querySelector("body").dir === "ltr") {
+			setIsLtr(true);
+		} else {
+			setIsLtr(false);
+		}
+	}, []);
+
 	const earthAnimation = {
 		loop: true,
 		autoplay: true,
@@ -33,6 +40,7 @@ function HomeScreen2() {
 			preserveAspectRatio: "xMidYMid slice",
 		},
 	};
+	// const { t } = useTranslation();
 	return (
 		<main>
 			<div className='Hero'>
@@ -210,7 +218,11 @@ function HomeScreen2() {
 				buttonText={
 					<FloatingButton
 						isSpan
-						position={{ top: "50%", left: "0", right: "-30px", bottom: "0" }}
+						position={
+							isLtr
+								? { top: "50%", left: "-30px", right: "auto", bottom: "0" }
+								: { top: "50%", left: "auto", right: "-30px", bottom: "0" }
+						}
 						backgroundColor='#ff652f'
 					>
 						<i className='fas fa-user usericon'></i>
@@ -225,4 +237,4 @@ function HomeScreen2() {
 	);
 }
 
-export default HomeScreen2;
+export default HomeScreen;
