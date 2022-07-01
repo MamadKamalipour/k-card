@@ -1,0 +1,11 @@
+@import "global.scss";
+.language-changer-dropdown {
+	.language-changer-button {
+		&:focus {
+			box-shadow: none;
+		}
+		&::after {
+			color: transparent;
+		}
+	}
+}

@@ -1,17 +1,5 @@
 @import "global.scss";
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 .MainLayout {
 	min-height: 100vh;
 	display: flex;
@@ -25,6 +13,7 @@
 		flex-shrink: 0;
 		z-index: 10;
 	}
+
 	main {
 		flex-grow: 1;
 	}
@@ -46,4 +35,16 @@
 			flex-direction: row;
 		}
 	}
+}
+.language-changer-wrapper {
+	position: absolute;
+	top: 0%;
+	left: 0;
+	right: auto;
+	z-index: 10;
+}
+body[dir="rtl"] .language-changer-wrapper {
+	top: 0%;
+	right: 0;
+	left: auto;
 }
