@@ -10,3 +10,4 @@ export { default as Pagination } from "./Pagination";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as LanguageChanger } from "./LanguageChanger";
 export { default as Loading } from "./Loading";
+export { default as CursorPoiner } from "./CursorPointer";

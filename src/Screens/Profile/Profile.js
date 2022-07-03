@@ -17,7 +17,7 @@ const Profile = () => {
 		} else {
 			setIsLtr(false);
 		}
-	}, []);
+	}, [isLtr]);
 	return (
 		<>
 			{user ? (
@@ -63,10 +63,20 @@ const Profile = () => {
 						<div className='calling-info'>
 							<h4>{t("contact_me")}</h4>
 							<div className='calling-buttons'>
-								<BlobButton backgroundColor={"#fca311"}>
+								<BlobButton
+									backgroundColor={"#fca311"}
+									isLink
+									link={`tel:${user.phoneNumber}`}
+								>
 									{t("phone_number")}
 								</BlobButton>
-								<BlobButton backgroundColor={"#ed143d"}>{t("email")}</BlobButton>
+								<BlobButton
+									backgroundColor={"#ed143d"}
+									isLink
+									link={`mailto:${user.email}`}
+								>
+									{t("email")}
+								</BlobButton>
 								<BlobButton backgroundColor={"royalblue"} isLink link={vcf}>
 									{t("add_contact")}
 								</BlobButton>

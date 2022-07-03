@@ -3,8 +3,17 @@ import video from "assets/herovideo.mp4";
 import image1 from "assets/images/card1.png";
 import image2 from "assets/images/card2.png";
 import image3 from "assets/images/card3.png";
+import image4 from "assets/images/card4.png";
 import * as animationData2 from "assets/lf30_editor_h64eijlm.json";
-import { BlobButton, FloatingButton, LoginModal, Modal, ReviewCard } from "components";
+import { Cards } from "components";
+import {
+	BlobButton,
+	FloatingButton,
+	LoginModal,
+	Modal,
+	ReviewCard,
+	CursorPoiner,
+} from "components";
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
@@ -14,6 +23,7 @@ import "./index.scss";
 
 function HomeScreen() {
 	const [isLtr, setIsLtr] = useState();
+	const [showTooltip, setShowTooltip] = useState(true);
 	useEffect(() => {
 		Cookies.set("i18next", "fas");
 		document.querySelector("body").dir = "rtl";
@@ -57,12 +67,15 @@ function HomeScreen() {
 						</div>
 						<div className='col-12 col-md-6'>
 							{/* <Cards /> */}
+
+							<CursorPoiner show={showTooltip} />
 							<div className='cards-wrapper'>
 								<Swiper
 									effect={"cards"}
 									grabCursor={true}
 									modules={[EffectCards]}
 									className='mySwiper'
+									onSlideChange={() => setShowTooltip(false)}
 								>
 									<SwiperSlide>
 										<img src={image1} className='slider-image' alt='card' />
@@ -74,7 +87,7 @@ function HomeScreen() {
 										<img src={image3} className='slider-image' alt='card' />
 									</SwiperSlide>
 									<SwiperSlide>
-										<img src={image3} className='slider-image' alt='card' />
+										<img src={image4} className='slider-image' alt='card' />
 									</SwiperSlide>
 								</Swiper>
 							</div>
