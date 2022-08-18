@@ -3,6 +3,7 @@ import { BlobButton, LanguageChanger } from "components";
 import { user } from "FakeData";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router";
 import { icons } from "values";
 import { socialMediaColors } from "values/colors";
 import vcf from "../../assets/Alihoushnagi.vcf";
@@ -11,6 +12,7 @@ import "./Profile.scss";
 const Profile = () => {
 	const { t } = useTranslation();
 	const [isLtr, setIsLtr] = useState();
+	const navigate = useNavigate()
 	useEffect(() => {
 		if (document.querySelector("body").dir === "ltr") {
 			setIsLtr(true);
@@ -18,6 +20,12 @@ const Profile = () => {
 			setIsLtr(false);
 		}
 	}, [isLtr]);
+	const location = useLocation().pathname.split("/")[1];
+	useEffect(() => {
+		if (location !== "MammadK9") navigate("/404");
+	}, []);
+
+	console.log(location);
 	return (
 		<>
 			{user ? (

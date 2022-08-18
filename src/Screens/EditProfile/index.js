@@ -4,23 +4,38 @@ import React from "react";
 import "./index.scss";
 
 const EditProfile = () => {
-	const submitFormHandler = () => {
-		console.log("submited");
+	const formSubmitHandler = (e) => {
+		console.log(e);
 	};
 	return (
 		<>
-			<section className=''>
+			<section className='edit-profile-page'>
 				<Formik
 					// validationSchema={AddPropertyValidate}
 					initialValues={{
 						avatar: "",
-						firstName: "",
-						lastName: "",
+						firstName_fas: "",
+						firstName_en: "",
+						lastName_fas: "",
+						lastName_en: "",
+						description_fas: "",
+						description_en: "",
 						email: "",
 						phoneNumber: "",
 						telegram: "",
+						whatsapp: "",
+						instagram: "",
+						dribble: "",
+						pinterest: "",
+						twitter: "",
+						youtube: "",
+						aparat: "",
+						tiktok: "",
+						spotify: "",
+						soundcloud: "",
+						twitch: "",
 					}}
-					// onSubmit={(e) => formSubmitHandler(e)}
+					onSubmit={(e) => formSubmitHandler(e)}
 				>
 					{({ values, errors }) => (
 						<Form>
@@ -59,21 +74,69 @@ const EditProfile = () => {
 											<Field
 												type='text'
 												className='form-control'
-												id='firstName'
-												placeholder='نام'
-												name='firstName'
+												id='firstNameـfas'
+												placeholder='نام به فارسی'
+												name='firstNameـfas'
 											/>
-											<label htmlFor='firstName'>نام </label>
+											<label htmlFor='firstNameـfas'>نام به فارسی</label>
 										</div>
 										<div className='form-floating mb-3'>
 											<Field
 												type='text'
 												className='form-control'
-												id='lastName'
-												placeholder='نام خانوادگی'
-												name='lastName'
+												id='firstName_en'
+												placeholder='نام به انگلیسی'
+												name='firstName_en'
 											/>
-											<label htmlFor='lastName'>نام خانوادگی</label>
+											<label htmlFor='firstName_en'>نام به انگلیسی</label>
+										</div>
+										<div className='form-floating mb-3'>
+											<Field
+												type='text'
+												className='form-control'
+												id='lastName_fas'
+												placeholder='نام خانوادگی به فارسی'
+												name='lastName_fas'
+											/>
+											<label htmlFor='lastName_fas'>
+												نام خانوادگی به فارسی
+											</label>
+										</div>
+										<div className='form-floating mb-3'>
+											<Field
+												type='text'
+												className='form-control'
+												id='lastName_en'
+												placeholder='نام خانوادگی به انگلیسی'
+												name='lastName_en'
+											/>
+											<label htmlFor='lastName_en'>
+												نام خانوادگی به انگلیسی
+											</label>
+										</div>
+										<div className='form-floating mb-3'>
+											<Field
+												type='text'
+												className='form-control'
+												id='description_fas'
+												placeholder='توضیحات به فارسی'
+												name='description_fas'
+											/>
+											<label htmlFor='description_fas'>
+												توضیحات به فارسی
+											</label>
+										</div>
+										<div className='form-floating mb-3'>
+											<Field
+												type='text'
+												className='form-control'
+												id='description_en'
+												placeholder='توضییحات به انگلیسی'
+												name='description_en'
+											/>
+											<label htmlFor='description_en'>
+												توضییحات به انگلیسی
+											</label>
 										</div>
 									</div>
 								</div>
@@ -242,31 +305,38 @@ const EditProfile = () => {
 									<label htmlFor='twitch'>Twitch</label>
 								</div>
 							</div>
+							<Modal
+								id='submitChangesModal'
+								buttonText={
+									<FloatingButton
+										type='button'
+										position={{ right: "20px", bottom: "10px" }}
+									>
+										ذخیره
+									</FloatingButton>
+								}
+								// buttonClassnames
+								modalTitle='ذخیره تغییرات'
+								isCentered={true}
+							>
+								<p>آیا مایل به ذخیره تغییرات هستید؟</p>
+								<div className='modal-buttons-wrapper'>
+									<Button type='submit' buttonType='success'>
+										ذخیره
+									</Button>
+									<Button
+										type='button'
+										data-bs-dismiss='modal'
+										aria-label='Close'
+									>
+										انصراف
+									</Button>
+								</div>
+							</Modal>
 						</Form>
 					)}
 				</Formik>
 			</section>
-			<Modal
-				id='submitChangesModal'
-				buttonText={
-					<FloatingButton position={{ right: "20px", bottom: "10px" }}>
-						ذخیره
-					</FloatingButton>
-				}
-				// buttonClassnames
-				modalTitle='ذخیره تغییرات'
-				isCentered={true}
-			>
-				<p>آیا مایل به ذخیره تغییرات هستید؟</p>
-				<div className='modal-buttons-wrapper'>
-					<Button type='submit' buttonType='success' onClick={() => submitFormHandler()}>
-						ذخیره
-					</Button>
-					<Button type='button' data-bs-dismiss='modal' aria-label='Close'>
-						انصراف
-					</Button>
-				</div>
-			</Modal>
 		</>
 	);
 };

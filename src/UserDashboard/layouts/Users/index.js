@@ -5,6 +5,7 @@ import image3 from "assets/images/img1.jpg";
 import DashboardLayout from "UserDashboard/examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "UserDashboard/examples/Navbars/DashboardNavbar";
 import "./index.scss";
+import { Link } from "react-router-dom";
 const Users = () => {
 	const users = [
 		{ id: 1, name: "ali", avatar: image3, email: "ali@example.com" },
@@ -33,7 +34,9 @@ const Users = () => {
 				<div className='users'>
 					<div className='users__header page-header'>
 						<h2>List Of Users</h2>
-						<Button>add user</Button>
+						<Link to='/dashboard/add-user' className='btn-main'>
+							Add
+						</Link>
 					</div>
 					<div className='user__tables'>
 						<Table
@@ -41,7 +44,6 @@ const Users = () => {
 							// onDelete={(id) => deletePropertyHandler(id)}
 							data={users}
 						/>
-                        
 					</div>
 				</div>
 			</div>

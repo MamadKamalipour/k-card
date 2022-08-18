@@ -1,4 +1,4 @@
-import avatar from "./assets/images/img1.jpg";
+import avatar from "./assets/images/img2.jpg";
 export const user = {
 	id: 0,
 	userName: "MammadK9",
@@ -59,7 +59,7 @@ export const user = {
 		firstName: "محمد جواد",
 		lastName: "کمالی پور",
 		description:
-			"من محمد هستم 20 ساله از رشت و 2 ساله تو زمینه برنامه نویسی وبسایت فعالیت مینم",
+			"من محمد هستم 20 ساله از رشت و 2 ساله تو زمینه برنامه نویسی وبسایت فعالیت میکنم",
 	},
 	en: {
 		firstName: "Mohammad Javad",

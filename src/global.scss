@@ -32,7 +32,15 @@ html {
 		font-size: 1.5rem;
 	}
 }
-
+.btn-main {
+	background-color: $orange-color;
+	padding: 0.5rem 1rem;
+	color: $white-color;
+	border-radius: 12px;
+	&:hover {
+		color: $white-color;
+	}
+}
 @mixin glass() {
 	border-radius: 25px;
 	background: rgba($gray-color, 0.6);
