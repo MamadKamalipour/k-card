@@ -1,56 +1,24 @@
 import avatar from "./assets/images/img2.jpg";
 export const user = {
 	id: 0,
-	userName: "MammadK9",
+	userName: "mammadk9",
 	avatar: avatar,
 	socialMedias: [
 		{
 			name: "telegram",
-			link: "#",
+			link: "https://www.t.me/mammadk9",
 		},
 		{
 			name: "whatsapp",
-			link: "#",
+			link: "https://api.whatsapp.com/send?phone=989027165900",
 		},
 		{
 			name: "instagram",
-			link: "#",
+			link: "https://www.instagram.com/mammadk9",
 		},
 		{
-			name: "dribble",
-			link: "#",
-		},
-		{
-			name: "pinterest",
-			link: "#",
-		},
-		{
-			name: "twitter",
-			link: "#",
-		},
-		{
-			name: "youtube",
-			link: "#",
-		},
-		{
-			name: "aparat",
-			link: "#",
-		},
-		{
-			name: "tiktok",
-			link: "#",
-		},
-		{
-			name: "spotify",
-			link: "#",
-		},
-		{
-			name: "soundcloud",
-			link: "#",
-		},
-		{
-			name: "twitch",
-			link: "#",
+			name: "linkedin",
+			link: "https://www.linkedin.com/in/mohammad-kamalipour-aba4701ba/",
 		},
 	],
 	email: "Mohammad.kp8093@gmail.com",

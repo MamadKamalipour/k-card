@@ -4,6 +4,7 @@ const socialMediaColors = [
 	{ name: "telegram", color: "royalblue" },
 	{ name: "whatsapp", color: "#128C7E" },
 	{ name: "dribble", color: "#ea4c89" },
+	{ name: "linkedin", color: "royalblue" },
 	{ name: "pinterest", color: "#E60023" },
 	{ name: "twitter", color: "#1DA1F2" },
 	{ name: "youtube", color: "#FF0000" },

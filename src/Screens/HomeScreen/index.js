@@ -67,29 +67,30 @@ function HomeScreen() {
 						</div>
 						<div className='col-12 col-md-6'>
 							{/* <Cards /> */}
-
-							<CursorPoiner show={showTooltip} />
-							<div className='cards-wrapper'>
-								<Swiper
-									effect={"cards"}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className='mySwiper'
-									onSlideChange={() => setShowTooltip(false)}
-								>
-									<SwiperSlide>
-										<img src={image1} className='slider-image' alt='card' />
-									</SwiperSlide>
-									<SwiperSlide>
-										<img src={image2} className='slider-image' alt='card' />
-									</SwiperSlide>
-									<SwiperSlide>
-										<img src={image3} className='slider-image' alt='card' />
-									</SwiperSlide>
-									<SwiperSlide>
-										<img src={image4} className='slider-image' alt='card' />
-									</SwiperSlide>
-								</Swiper>
+							<div className="position-relative">
+								<CursorPoiner show={showTooltip} />
+								<div className='cards-wrapper'>
+									<Swiper
+										effect={"cards"}
+										grabCursor={true}
+										modules={[EffectCards]}
+										className='mySwiper'
+										onSlideChange={() => setShowTooltip(false)}
+									>
+										<SwiperSlide>
+											<img src={image1} className='slider-image' alt='card' />
+										</SwiperSlide>
+										<SwiperSlide>
+											<img src={image2} className='slider-image' alt='card' />
+										</SwiperSlide>
+										<SwiperSlide>
+											<img src={image3} className='slider-image' alt='card' />
+										</SwiperSlide>
+										<SwiperSlide>
+											<img src={image4} className='slider-image' alt='card' />
+										</SwiperSlide>
+									</Swiper>
+								</div>
 							</div>
 						</div>
 					</div>

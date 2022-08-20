@@ -47,7 +47,7 @@
 	}
 	.cards-wrapper {
 		direction: ltr;
-
+		overflow: hidden;
 		img {
 			object-fit: cover;
 			transform: rotate(90deg);

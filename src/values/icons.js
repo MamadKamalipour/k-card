@@ -3,6 +3,7 @@ const icons = {
 	telegram: "fab fa-telegram",
 	whatsapp: "fab fa-whatsapp",
 	dribble: "fab fa-dribbble",
+	linkedin: "fab fa-linkedin",
 	pinterest: "fab fa-pinterest",
 	twitter: "fab fa-twitter",
 	youtube: "fab fa-youtube",
